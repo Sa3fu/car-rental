@@ -1,4 +1,5 @@
-import React, { useState,Link} from 'react';
+import React, { useState} from 'react';
+import { Link } from 'react-router-dom';
 import ManagerLogin from './manager/ManagerLogin';
 
 
@@ -11,8 +12,8 @@ const Login = () => {
         setPerson(e.target.value);
     };
     const handleClick = () => {
-        if(person==="Manager"){
-            <Link to='./manager/MangerLogin.js'/>
+        if(person==='Manager'){
+            <Link to='./manager/ManagerLogin'/>
         }
         else{
             <Link to="./employee"/>

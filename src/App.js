@@ -1,15 +1,15 @@
-import React, {BrowserRoute}from 'react';
-import { Route, Routes } from 'react-router';
+import React from 'react';
+import { Route,Routes} from 'react-router-dom';
 import Login from './components/Login';
 import ManagerLogin from './components/manager/ManagerLogin';
 
 function App() {
   return (
-    <div>
       <Login>
-        <ManagerLogin/>
+        <Routes>
+          <Route path='/ManagerLogin' element={<ManagerLogin/>}/>
+        </Routes>
       </Login>
-    </div>
     
     
   );
